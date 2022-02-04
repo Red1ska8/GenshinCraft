@@ -31,8 +31,8 @@ public class GenshinCraft
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         FoodBase.register(eventBus);
 
-        eventBus.addListener(this::setup);
 
+        eventBus.addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
