@@ -1,4 +1,8 @@
 {
   "item.genshincraft.radish": "Radish",
-  "item.genshincraft.radish_balls": "Fried Radish Balls"
+  "item.genshincraft.radish_balls": "Fried Radish Balls",
+  "item.genshincraft.flour": "Flour",
+  "item.genshincraft.pepper": "Pepper",
+
+  "itemGroup.genshinfood": "Genshin Food"
 }
