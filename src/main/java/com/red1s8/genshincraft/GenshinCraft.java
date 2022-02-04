@@ -1,5 +1,6 @@
 package com.red1s8.genshincraft;
 
+import com.red1s8.genshincraft.items.food.FoodBase;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,8 @@ public class GenshinCraft
     public GenshinCraft() {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        FoodBase.register(eventBus);
+
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
