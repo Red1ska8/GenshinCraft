@@ -1,6 +1,6 @@
 package com.red1s8.genshincraft.blocks.crops;
 
-import com.red1s8.genshincraft.items.ItemsBase;
+import com.red1s8.genshincraft.items.ItemsRegister;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -35,7 +35,7 @@ public class RadishCrop extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ItemsBase.RADISH.get();
+        return ItemsRegister.RADISH.get();
     }
 
     @Override

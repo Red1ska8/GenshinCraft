@@ -1,7 +1,7 @@
 package com.red1s8.genshincraft;
 
-import com.red1s8.genshincraft.blocks.BlocksBase;
-import com.red1s8.genshincraft.items.ItemsBase;
+import com.red1s8.genshincraft.blocks.BlocksRegister;
+import com.red1s8.genshincraft.items.ItemsRegister;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -25,8 +25,8 @@ public class GenshinCraft
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ItemsBase.register(eventBus);
-        BlocksBase.register(eventBus);
+        ItemsRegister.register(eventBus);
+        BlocksRegister.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient);
@@ -35,7 +35,7 @@ public class GenshinCraft
     }
 
     private void setupClient(final FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(BlocksBase.RADISH_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksRegister.RADISH_CROP.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event)

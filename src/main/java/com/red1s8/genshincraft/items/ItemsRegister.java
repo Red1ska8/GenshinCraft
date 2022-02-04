@@ -1,8 +1,8 @@
 package com.red1s8.genshincraft.items;
 
 import com.red1s8.genshincraft.GenshinCraft;
-import com.red1s8.genshincraft.blocks.BlocksBase;
-import com.red1s8.genshincraft.items.food.GenshinCreativeItemTabs;
+import com.red1s8.genshincraft.blocks.BlocksRegister;
+import com.red1s8.genshincraft.misc.GenshinCreativeItemTabs;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -13,7 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ItemsBase {
+public class ItemsRegister {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GenshinCraft.MOD_ID);
 
     public static void register(IEventBus eventBus) {
@@ -21,7 +21,7 @@ public class ItemsBase {
     }
 
     public static final RegistryObject<Item> RADISH = ITEMS.register("radish",
-            () -> new ItemNameBlockItem(BlocksBase.RADISH_CROP.get(), new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
+            () -> new ItemNameBlockItem(BlocksRegister.RADISH_CROP.get(), new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(2).fast().build())));
     public static final RegistryObject<Item> RADISH_BALLS = ITEMS.register("radish_balls",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)

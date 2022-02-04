@@ -2,7 +2,7 @@ package com.red1s8.genshincraft.blocks;
 
 import com.red1s8.genshincraft.GenshinCraft;
 import com.red1s8.genshincraft.blocks.crops.RadishCrop;
-import com.red1s8.genshincraft.items.ItemsBase;
+import com.red1s8.genshincraft.items.ItemsRegister;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -16,7 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class BlocksBase {
+public class BlocksRegister {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GenshinCraft.MOD_ID);
 
     protected <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
@@ -26,7 +26,7 @@ public class BlocksBase {
     }
 
     protected <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ItemsBase.ITEMS.register(name,() -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+        ItemsRegister.ITEMS.register(name,() -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     }
 
     public static void register(IEventBus eventBus){
