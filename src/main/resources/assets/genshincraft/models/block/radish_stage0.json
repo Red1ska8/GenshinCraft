@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "genshincraft:block/crops/radish_stage_0"
+  }
+}

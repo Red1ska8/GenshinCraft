@@ -1,38 +1,35 @@
-package com.red1s8.genshincraft.items.food;
+package com.red1s8.genshincraft.items;
 
 import com.red1s8.genshincraft.GenshinCraft;
+import com.red1s8.genshincraft.blocks.BlocksBase;
+import com.red1s8.genshincraft.items.food.GenshinCreativeItemTabs;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+public class ItemsBase {
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GenshinCraft.MOD_ID);
 
-public class FoodBase extends Item{
-    public static final DeferredRegister<Item> FOOD = DeferredRegister.create(ForgeRegistries.ITEMS, GenshinCraft.MOD_ID);
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
 
-    public static final RegistryObject<Item> RADISH = FOOD.register("radish",
-            () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
+    public static final RegistryObject<Item> RADISH = ITEMS.register("radish",
+            () -> new ItemNameBlockItem(BlocksBase.RADISH_CROP.get(), new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(2).fast().build())));
-    public static final RegistryObject<Item> RADISH_BALLS = FOOD.register("radish_balls",
+    public static final RegistryObject<Item> RADISH_BALLS = ITEMS.register("radish_balls",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,200,0),1f).build())));
-    public static final RegistryObject<Item> FLOUR = FOOD.register("flour",
+    public static final RegistryObject<Item> FLOUR = ITEMS.register("flour",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(1).build())));
-    public static final RegistryObject<Item> PEPPER = FOOD.register("pepper",
+    public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(1).fast().build())));
-
-
-    public FoodBase(Properties pProperties) {
-        super(pProperties);
-    }
-
-    public static void register(IEventBus eventBus){
-        FOOD.register(eventBus);
-    }
 }

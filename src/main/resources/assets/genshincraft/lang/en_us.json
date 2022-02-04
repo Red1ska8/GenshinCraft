@@ -4,5 +4,7 @@
   "item.genshincraft.flour": "Flour",
   "item.genshincraft.pepper": "Pepper",
 
-  "itemGroup.genshinfood": "Genshin Food"
+  "itemGroup.genshinfood": "Genshin Food",
+
+  "block.genshincraft.radish_crop": "Radish Crop"
 }
