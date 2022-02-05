@@ -1,5 +1,6 @@
 package com.red1s8.genshincraft.world.generation;
 
+import com.google.common.collect.ImmutableList;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTes
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class OreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
@@ -22,8 +24,8 @@ public class OreGeneration {
     }
 
     private static OreConfiguration getOverworldFeatureConfig(OreType ore) {
-        return new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES,
-                ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
+            return new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,ore.getBlock().get().defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getBlock_deepslate().get().defaultBlockState())), ore.getMaxVeinSize());
     }
 
     private static OreConfiguration getNetherFeatureConfig(OreType ore) {
@@ -54,8 +56,9 @@ public class OreGeneration {
     }
 
     private static void spawnOreInOverworldInGivenBiomes(OreType ore, final BiomeLoadingEvent event, Biome... biomesToSpawnIn) {
-        OreConfiguration oreFeatureConfig = new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES,
-                ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
+
+        OreConfiguration oreFeatureConfig = new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,ore.getBlock().get().defaultBlockState()),
+                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getBlock_deepslate().get().defaultBlockState())), ore.getMaxVeinSize());
 
         HeightRangePlacement heightRangePlacement = HeightRangePlacement.uniform(VerticalAnchor.absolute(ore.getMinHeight()),
                 VerticalAnchor.absolute(ore.getMaxHeight()));
@@ -69,8 +72,8 @@ public class OreGeneration {
     }
 
     private static void spawnOreInOverworldInAllBiomes(OreType ore, final BiomeLoadingEvent event) {
-        OreConfiguration oreFeatureConfig = new OreConfiguration(OreFeatures.STONE_ORE_REPLACEABLES,
-                ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
+        OreConfiguration oreFeatureConfig = new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,ore.getBlock().get().defaultBlockState()),
+                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getBlock_deepslate().get().defaultBlockState())), ore.getMaxVeinSize());
 
         HeightRangePlacement heightRangePlacement = HeightRangePlacement.uniform(VerticalAnchor.absolute(ore.getMinHeight()),
                 VerticalAnchor.absolute(ore.getMaxHeight()));

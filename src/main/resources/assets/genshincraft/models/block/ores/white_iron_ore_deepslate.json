@@ -1,0 +1,4 @@
+{
+  "parent": "block/cube_all",
+  "textures": {"all": "genshincraft:block/ores/white_iron_ore_deepslate"}
+}

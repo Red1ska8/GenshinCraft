@@ -1,6 +1,7 @@
 {
   "replace": "false",
   "values": [
-    "genshincraft:white_iron_ore"
+    "genshincraft:white_iron_ore",
+    "genshincraft:white_iron_ore_deepslate"
   ]
 }

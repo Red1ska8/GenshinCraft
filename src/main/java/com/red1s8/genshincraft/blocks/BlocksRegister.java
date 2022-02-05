@@ -38,4 +38,6 @@ public class BlocksRegister {
 
     public static final RegistryObject<Block> WHITE_IRON_ORE = registerBlock("white_iron_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(10f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_IRON_ORE_DEEPSLATE = registerBlock("white_iron_ore_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(12f).requiresCorrectToolForDrops()));
 }
