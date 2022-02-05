@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class RadishCrop extends CropBlock {
     private static final IntegerProperty NEW_AGE = BlockStateProperties.AGE_3;
+    private static final int Max_Age = 3;
 
     public RadishCrop(Properties properties) {
         super(properties);
@@ -25,7 +26,7 @@ public class RadishCrop extends CropBlock {
 
     @Override
     public int getMaxAge() {
-        return 3;
+        return Max_Age;
     }
 
     @Override

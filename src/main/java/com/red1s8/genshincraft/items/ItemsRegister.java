@@ -32,4 +32,7 @@ public class ItemsRegister {
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(1).fast().build())));
+
+    public static final RegistryObject<Item> WHITE_IRON_CHUNK = ITEMS.register("white_iron_chunk",
+            () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_BLOCKS_ORES)));
 }

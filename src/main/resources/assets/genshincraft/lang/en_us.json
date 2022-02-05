@@ -3,8 +3,11 @@
   "item.genshincraft.radish_balls": "Fried Radish Balls",
   "item.genshincraft.flour": "Flour",
   "item.genshincraft.pepper": "Pepper",
+  "item.genshincraft.white_iron_chunk": "White Iron Chunk",
 
   "itemGroup.genshinfood": "Genshin Food",
+  "itemGroup.genshinblocks_ores": "Genshin Blocks & Ores",
 
-  "block.genshincraft.radish_crop": "Radish Crop"
+  "block.genshincraft.radish_crop": "Radish Crop",
+  "block.genshincraft.white_iron_ore": "White Iron Ore"
 }

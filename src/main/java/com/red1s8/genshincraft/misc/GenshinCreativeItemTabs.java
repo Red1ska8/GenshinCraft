@@ -11,4 +11,11 @@ public class GenshinCreativeItemTabs {
             return new ItemStack(ItemsRegister.RADISH_BALLS.get());
         }
     };
+
+    public static final CreativeModeTab GENSHIN_BLOCKS_ORES = new CreativeModeTab("genshinblocks_ores") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ItemsRegister.WHITE_IRON_CHUNK.get());
+        }
+    };
 }
