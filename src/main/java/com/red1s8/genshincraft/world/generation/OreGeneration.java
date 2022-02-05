@@ -57,6 +57,7 @@ public class OreGeneration {
 
     private static void spawnOreInOverworldInGivenBiomes(OreType ore, final BiomeLoadingEvent event, Biome... biomesToSpawnIn) {
 
+        //idk why, but it actually works, even in official Minecraft classes, so I'll leave it for now just as it is. Same for next two List,of errors
         OreConfiguration oreFeatureConfig = new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,ore.getBlock().get().defaultBlockState()),
                 OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore.getBlock_deepslate().get().defaultBlockState())), ore.getMaxVeinSize());
 
