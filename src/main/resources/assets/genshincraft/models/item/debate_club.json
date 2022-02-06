@@ -1,0 +1,6 @@
+{
+  "parent": "genshincraft:item/base_claymore",
+  "textures": {
+    "layer0": "genshincraft:item/debate_club"
+  }
+}

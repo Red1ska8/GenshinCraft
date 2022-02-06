@@ -18,4 +18,11 @@ public class GenshinCreativeItemTabs {
             return new ItemStack(ItemsRegister.WHITE_IRON_CHUNK.get());
         }
     };
+
+    public static final CreativeModeTab GENSHIN_WEAPON = new CreativeModeTab("genshin_weapon") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ItemsRegister.DEBATE_CLUB.get());
+        }
+    };
 }

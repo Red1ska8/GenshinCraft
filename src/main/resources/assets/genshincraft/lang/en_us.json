@@ -3,9 +3,12 @@
   "item.genshincraft.radish_balls": "Fried Radish Balls",
   "item.genshincraft.flour": "Flour",
   "item.genshincraft.pepper": "Pepper",
+
+  "item.genshincraft.debate_club": "Debate Club",
   "item.genshincraft.white_iron_chunk": "White Iron Chunk",
 
   "itemGroup.genshinfood": "Genshin Food",
+  "itemGroup.genshin_weapon": "Genshin Weapon",
   "itemGroup.genshinblocks_ores": "Genshin Blocks & Ores",
 
   "block.genshincraft.radish_crop": "Radish Crop",

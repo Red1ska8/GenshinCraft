@@ -8,6 +8,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +33,9 @@ public class ItemsRegister {
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(1).fast().build())));
+
+    public static final RegistryObject<Item> DEBATE_CLUB = ITEMS.register("debate_club",
+            () -> new SwordItem(WeaponTiers.T1_CLAYMORES,8,-2.7f,new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_WEAPON)));
 
     public static final RegistryObject<Item> WHITE_IRON_CHUNK = ITEMS.register("white_iron_chunk",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_BLOCKS_ORES)));
