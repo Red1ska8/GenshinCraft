@@ -3,6 +3,7 @@ package com.red1s8.genshincraft.blocks;
 import com.red1s8.genshincraft.GenshinCraft;
 import com.red1s8.genshincraft.blocks.crops.RadishCrop;
 import com.red1s8.genshincraft.items.ItemsRegister;
+import com.red1s8.genshincraft.misc.GenshinCreativeItemTabs;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -26,7 +27,7 @@ public class BlocksRegister {
     }
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ItemsRegister.ITEMS.register(name,() -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+        ItemsRegister.ITEMS.register(name,() -> new BlockItem(block.get(), new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_BLOCKS_ORES)));
     }
 
     public static void register(IEventBus eventBus){

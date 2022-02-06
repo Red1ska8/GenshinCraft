@@ -25,7 +25,7 @@ public class ItemsRegister {
                     .food(new FoodProperties.Builder().nutrition(2).fast().build())));
     public static final RegistryObject<Item> RADISH_BALLS = ITEMS.register("radish_balls",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
-                    .food(new FoodProperties.Builder().effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,200,0),1f).build())));
+                    .food(new FoodProperties.Builder().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST,200,0),1f).build())));
     public static final RegistryObject<Item> FLOUR = ITEMS.register("flour",
             () -> new Item(new Item.Properties().tab(GenshinCreativeItemTabs.GENSHIN_FOOD)
                     .food(new FoodProperties.Builder().nutrition(1).build())));
